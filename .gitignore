@@ -4,3 +4,4 @@ js/node_modules/
 js/jspm_packages/
 ts/node_modules/
 ts/jspm_packages/
+typings/
