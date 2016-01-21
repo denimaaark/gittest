@@ -4,5 +4,8 @@ $(document).ready(function () {
 
     for (var i = 0; i < array.length; i++) {
         var element = array[i];
-    }            
+    }
+    
+    fnVani("mirko", "miric");    
+                
 });
