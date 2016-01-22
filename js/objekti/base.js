@@ -43,14 +43,6 @@
     log(">> Base enclosure root");
 }(jQuery, window.deni = window.deni || {})); // tu se definira namespace (kreira se novi objekt ako ne postoji deni objekt)
 
-
-
-
-function log(tekst) {
-    //console.log(tekst);
-    $(".test").append(tekst).append("<br />");
-}
-
 $(document).ready(function () {
     log(">> ready Base unit");
 
