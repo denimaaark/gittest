@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript test</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <h1>Javascript test</h1>
+    <div class="test">
+    </div>
+    <hr>
+
+    <div class="row">
+        <div class="col-md-2">
+            <div class="input-group">
+                <div class="input-group-addon">Test eventa</div>
+                <input type="text" class="form-control" id="ed1">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <button type="button" onclick="eventFire()" class="btn btn-default">Event fire</button>
+            <button type="button" onclick="eventOff()" class="btn btn-default">Event off</button>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+    </div>
+    <hr>
+    <script type="text/javascript" src="objekti/base.js"></script>
+    <script type="text/javascript" src="objekti/sifarnik.js"></script>
+    <script type="text/javascript" src="js/eventi.js"></script>
+    <script type="text/javascript" src="js/promises.js"></script>    
+    <!--<script type="text/javascript" src="simple.js"></script>-->
+</body>
+
+</html>
+
+<script>
+    $(document).on("konto.pomoc.changed", function (event, pomocData) {
+        $("#ed1").val(pomocData.poziv);
+    });
+
+</script>
