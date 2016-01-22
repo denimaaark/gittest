@@ -39,26 +39,26 @@
     };
     log(">> enclosure root");
 }());
-//}(jQuery, konto.Modul = konto.Modul || {}));
+//}(jQuery, deni.Modul = deni.Modul || {}));
 
 
 
 
 
-function log(tekst) {
-    //console.log(tekst);
-    $(".test").append(tekst).append("<br />");
-}
+// function log(tekst) {
+//     //console.log(tekst);
+//     $(".test").append(tekst).append("<br />");
+// }
 
 $(document).ready(function () {
     log(">> ready");
 
-    //var obj = new konto.Modul();
+    //var obj = new deni.Modul();
 
     var obj2 = new Modul2();
     log(obj2.Naziv());
     obj2.Otvori();
 
-
+    
     //o.getFoo();
 });

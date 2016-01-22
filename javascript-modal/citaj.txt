@@ -1,0 +1,5 @@
+﻿
+ODLIČAN LINK, KREIRANJE JS OBJEKTA, CONSTRUCTOR, PROTOTYPE, DEFAULTS
+https://github.com/scotch-io/javascript-modal.git
+https://scotch.io/tutorials/building-your-own-javascript-modal-plugin
+

@@ -1,4 +1,4 @@
-﻿(function ($, konto) {
+﻿(function ($, deni) {
     
     // this keyword is pointing at the window
     var that = this;
@@ -8,7 +8,7 @@
     // constructor, ne starta se kod inicijalizacije nego kad se kreira
     var BaseModul = function () {
         var that = this; // kad se kreira = BaseModul
-        log(">> function Base (constructor)");
+        log(">> Base function (constructor)");
         this.modul = {};
 
         this.Ime = '';
@@ -18,12 +18,12 @@
         init.call(this);
     };
 
-    konto.BaseModul = BaseModul; // u konto objekt referenciramo glavni objekt
+    deni.BaseModul = BaseModul; // u deni objekt referenciramo glavni objekt
     BaseModul.prototype.constructor = BaseModul;
 
     function init() {
         var that = this; // call šalje that = BaseModul
-        log(">> function init call Base");
+        log(">> Base function init call");
     }
   
     function getNaziv() {
@@ -40,8 +40,8 @@
         foo();
     };
 
-    log(">> enclosure root Base");
-}(jQuery, window.konto = window.konto || {})); // tu se definira namespace (kreira se novi objekt ako ne postoji konto objekt)
+    log(">> Base enclosure root");
+}(jQuery, window.deni = window.deni || {})); // tu se definira namespace (kreira se novi objekt ako ne postoji deni objekt)
 
 
 
@@ -52,8 +52,7 @@ function log(tekst) {
 }
 
 $(document).ready(function () {
-    log(">> ready Base");
+    log(">> ready Base unit");
 
-    var obj = new konto.BaseModul();
-
+    var obj = new deni.BaseModul(); 
 });

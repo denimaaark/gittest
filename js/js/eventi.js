@@ -4,15 +4,15 @@ var pomocData = {
     verzija : "1"                    	
 }; 
 $(document).ready(function () {
-    //$(document).trigger("konto.pomoc.changed", pomocData);                   
+    //$(document).trigger("deni.pomoc.changed", pomocData);                   
 });
 
 function eventFire(){
-    $(document).trigger("konto.pomoc.changed", pomocData);    
+    $(document).trigger("deni.pomoc.changed", pomocData);    
 }
 
 function eventOff(){
-    $(document).off("konto.pomoc.changed");    
+    $(document).off("deni.pomoc.changed");    
 }
 
 function test (){
