@@ -1,4 +1,5 @@
-﻿(function ($, deni) {
+﻿log("SIFARNIK", true);
+(function ($, deni) {
     
     // this keyword is pointing at the window
     var that = this;
@@ -8,7 +9,7 @@
     // constructor, ne starta se kod inicijalizacije nego kad se kreira
     var SifarnikModul = function () {
         var that = this; // kad se kreira = SifarnikModul
-        log(">> Sifarnik function (constructor)");
+        log("Sifarnik function (constructor)");
         this.modul = {};
 
         this.Ime = '';
@@ -23,27 +24,21 @@
 
     function init() {
         var that = this; // call šalje that = SifarnikModul
-        log(">> Sifarnik function init call");
+        log("Sifarnik function init call");
     }
   
     function getNaziv() {
         return this.Ime + ' ' + this.Prezime;
     }
 
-    log(">> Sifarnik enclosure root");
+    log("Sifarnik enclosure root");
 }(jQuery, window.deni = window.deni || {})); // tu se definira namespace (kreira se novi objekt ako ne postoji deni objekt)
 
 
-
-
-// function log(tekst) {
-//     //console.log(tekst);
-//     $(".test").append(tekst).append("<br />");
-// }
+// globalno da ga vidim u konzoli
+log("Sifarnik new create object");
+var objSifarnik = new deni.SifarnikModul();
 
 $(document).ready(function () {
-    log(">> ready Sifarnik unit");
-
-    var obj = new deni.SifarnikModul();
-
+    log("Ready Sifarnik unit");
 });

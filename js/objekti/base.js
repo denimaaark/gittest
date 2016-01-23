@@ -1,4 +1,5 @@
-﻿(function ($, deni) {
+﻿log("BASE", true);
+(function ($, deni) {
     
     // this keyword is pointing at the window
     var that = this;
@@ -8,22 +9,24 @@
     // constructor, ne starta se kod inicijalizacije nego kad se kreira
     var BaseModul = function () {
         var that = this; // kad se kreira = BaseModul
-        log(">> Base function (constructor)");
+        log("Base function (constructor)");
         this.modul = {};
 
-        this.Ime = '';
-        this.Prezime = '';
-        this.Naziv = getNaziv;
-
-        init.call(this);
+        this.Ime = 'Deni';
+        this.Prezime = 'Markovic';
+        this.Naziv = getNaziv; // pozvati sa objBase.Naziv()
+        var Adresa = 'New York'; // nije vidljivo    
+        Adresa = 'New York'; // nije vidljivo
+        init.call(this); 
     };
 
-    deni.BaseModul = BaseModul; // u deni objekt referenciramo glavni objekt
-    BaseModul.prototype.constructor = BaseModul;
+    deni.BaseModul = BaseModul; // u deni objekt referenciramo glavni objekt, ovdje se definira konstruktor
+    BaseModul.prototype.constructor = BaseModul; // ovo neznam što znači, ne vidim promjenu ako se disebla
 
     function init() {
         var that = this; // call šalje that = BaseModul
-        log(">> Base function init call");
+        //debugger;
+        log("Base function init call");
     }
   
     function getNaziv() {
@@ -31,20 +34,27 @@
     }
 
     function test1() {
-        log(">> function test");
+        log("function test");
         this.var1 = "asd";
     }
 
     this.getModul = function () {
-        log(">> function getModul Base");
+        log("Base function getModul");
         foo();
     };
+    
+    function foo(){
+        log("Base function foo");
+    }
 
-    log(">> Base enclosure root");
+    log("Base enclosure root");
 }(jQuery, window.deni = window.deni || {})); // tu se definira namespace (kreira se novi objekt ako ne postoji deni objekt)
 
-$(document).ready(function () {
-    log(">> ready Base unit");
 
-    var obj = new deni.BaseModul(); 
+// globalno da ga vidim u konzoli
+log("Base new create object");
+var objBase = new deni.BaseModul(); 
+
+$(document).ready(function () {
+    log("Ready Base unit");
 });
