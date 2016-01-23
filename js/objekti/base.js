@@ -9,7 +9,7 @@
     // constructor, ne starta se kod inicijalizacije nego kad se kreira
     var BaseModul = function () {
         var that = this; // kad se kreira = BaseModul
-        log("Base function (constructor)");
+        log("Base var BaseModul = function () --> constructor");
         this.modul = {};
 
         this.Ime = 'Deni';
@@ -26,7 +26,7 @@
     function init() {
         var that = this; // call šalje that = BaseModul
         //debugger;
-        log("Base function init call");
+        log("Base function init() call");
     }
   
     function getNaziv() {
@@ -52,7 +52,7 @@
 
 
 // globalno da ga vidim u konzoli
-log("Base new create object");
+log("Base var objBase = new deni.BaseModul();");
 var objBase = new deni.BaseModul(); 
 
 $(document).ready(function () {

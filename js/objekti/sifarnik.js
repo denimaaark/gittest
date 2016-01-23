@@ -9,7 +9,7 @@
     // constructor, ne starta se kod inicijalizacije nego kad se kreira
     var SifarnikModul = function () {
         var that = this; // kad se kreira = SifarnikModul
-        log("Sifarnik function (constructor)");
+        log("Sifarnik var SifarnikModul = function --> constructor");
         this.modul = {};
 
         this.Ime = '';
@@ -24,7 +24,7 @@
 
     function init() {
         var that = this; // call šalje that = SifarnikModul
-        log("Sifarnik function init call");
+        log("Sifarnik function init() call");
     }
   
     function getNaziv() {
@@ -36,7 +36,7 @@
 
 
 // globalno da ga vidim u konzoli
-log("Sifarnik new create object");
+log("Sifarnik var objSifarnik = new deni.SifarnikModul()");
 var objSifarnik = new deni.SifarnikModul();
 
 $(document).ready(function () {

@@ -1,0 +1,10 @@
+// Place your settings in this file to overwrite default and user settings.
+// može se samo dodati ono čega mena u defaultu, ne prepiše default opcije
+{
+	"search.exclude": {
+		"**/jspm_packages": true
+	},
+    
+    // Experimental support for fuzzy matching of file names in the file picker.
+    "filePicker.alternateFileNameMatching": false  
+}
