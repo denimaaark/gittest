@@ -1,5 +1,5 @@
 ﻿log("SIFARNIK", true);
-(function ($, deni) {
+(function ($, aaaaa) {
     
     // this keyword is pointing at the window
     var that = this;
@@ -19,7 +19,7 @@
         init.call(this);
     };
 
-    deni.SifarnikModul = SifarnikModul; // u deni objekt referenciramo glavni objekt
+    aaaaa.SifarnikModul = SifarnikModul; // u aaaaa objekt referenciramo glavni objekt
     SifarnikModul.prototype.constructor = SifarnikModul;
 
     function init() {
@@ -32,12 +32,12 @@
     }
 
     log("Sifarnik enclosure root");
-}(jQuery, window.deni = window.deni || {})); // tu se definira namespace (kreira se novi objekt ako ne postoji deni objekt)
+}(jQuery, window.aaaaa = window.aaaaa || {})); // tu se definira namespace (kreira se novi objekt ako ne postoji aaaaa objekt)
 
 
 // globalno da ga vidim u konzoli
-log("Sifarnik var objSifarnik = new deni.SifarnikModul()");
-var objSifarnik = new deni.SifarnikModul();
+log("Sifarnik var objSifarnik = new aaaaa.SifarnikModul()");
+var objSifarnik = new aaaaa.SifarnikModul();
 
 $(document).ready(function () {
     log("Ready Sifarnik unit");

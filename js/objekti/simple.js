@@ -11,7 +11,7 @@
     this.SimpleModul = function () {
         log("Simple this.SimpleModul = function () --> constructor");
         var Godina = 30;
-        this.Ime = 'Deni';
+        this.Ime = 'aaaaa';
         this.Prezime = 'Markovic';
         this.Naziv = getNaziv;
         this.Naziv2 = getNaziv(); // ovo ne radi sa pozivom --> log( obj2.Naziv() );
