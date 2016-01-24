@@ -1,0 +1,37 @@
+//https://marketplace.visualstudio.com/items/msjsdiag.debugger-for-chrome
+//Right click the Chrome shortcut, and select properties
+//In the "target" field, append --remote-debugging-port=9222
+{
+	"version": "0.2.0",
+	"configurations": [
+        // zatvoriti sve chrome, run       
+		{
+			"name": "Launch js index.html",
+			"type": "chrome",
+			"request": "launch",
+			"webRoot": "js",
+            "file": "js/index.html"
+		},
+        // ovo ne radi, starta se ali ne brekpointa, otvaranje debuggerau chrome-u kila chrome
+		{
+			"name": "Launch js localhost with sourcemaps",
+			"type": "chrome",
+			"request": "launch",           
+			"url": "http://localhost:3000",
+			"sourceMaps": true,
+			"webRoot": "js"
+		},
+        // startati sa chrome.exe --remote-debugging-port=9222
+        // otvoriti stranicu http://localhost:3000
+        // run, ne otvarati chrome debugger
+		{
+			"name": "Attach js",
+			"type": "chrome",
+			"request": "attach",
+            "port": 9222,
+            "webRoot": "js"
+		}
+	]
+}
+
+
