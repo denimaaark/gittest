@@ -6,3 +6,4 @@ js/bower_components/
 ts/node_modules/
 ts/jspm_packages/
 typings/
+local/
