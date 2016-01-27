@@ -8,6 +8,7 @@
 
     // Create an immediately invoked functional expression to wrap our code
     // Define our constructor
+    // dali ide ovdje sa this ili bez ? ovo je definira kao globalnu pod window ?
     this.SimpleModul = function () {
         log("Simple this.SimpleModul = function () --> constructor");
         var Godina = 30;
