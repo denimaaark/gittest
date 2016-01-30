@@ -1,5 +1,5 @@
-function log(tekst, separator) {
-    var el = $(".test");
+function log(tekst, separator, element) {
+    var el = (element) ? $(element) : $(".test");        
     var sep = "----------------------------------------------------------<br/>";
     var br = "<br/>";
     var arr = ">>> ";
