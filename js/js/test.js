@@ -6,6 +6,8 @@ $(document).ready(function () {
         var element = array[i];
     }
     
-    fnVani("mirko", "miric");    
-                        
+    fnVani("mirko", "miric");
+
+    var ab = new aaaaa.BaseModul();;
+    ab.FirstName();
 });
