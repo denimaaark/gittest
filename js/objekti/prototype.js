@@ -1,6 +1,6 @@
 // https://timkadlec.com/2008/01/using-prototypes-in-javascript/
 
-log("Proto test", true);
+log("PROTOTYPE", true);
 
 // base
 function Pet(name, species){

@@ -1,3 +1,5 @@
+log("FUNCTIONS", true);
+
 // ----------------------------------------------------------------------------------
 // javascript objekt
 // prvo veliko slovo i nesmije imati return
@@ -16,9 +18,9 @@ function FnGlobal(ime, prezime, adresa) {
 function addKuna(kuna) {
     this.kuna = this.ime + " ima " + kuna;
 }
-var obj1 = new FnGlobal("Deni", "Markovic", "USA");
-obj1.addKuna(200);
-log(obj1.getKuna());
+var fnGlobal1 = new FnGlobal("Deni", "Markovic", "USA");
+fnGlobal1.addKuna(200);
+log(fnGlobal1.getKuna());
 
 // ----------------------------------------------------------------------------------
 // poziv prije --> fnglobal() radi
@@ -32,7 +34,7 @@ function fnGlobal() {
     this.prezime = "Markovic";
     return naziv;
 }
-var fnGlobal1 = fnGlobal();
+var fnGlobal2 = fnGlobal();
 
 // ovo javlja greške: 1 funkcija za konstruktor mora početi Velikim slovom
 // ako kreiramo objekt sa nju, nesmije imati return value, mora biti void
@@ -54,7 +56,6 @@ var fnVar = function () {
 var fnVar1 = fnVar();
 // var fnVar2 = new fnVar(); // NOK kao i gore
 fnVar();
-log(fnVar);
 
 // ----------------------------------------------------------------------------------
 // http://www.permadi.com/tutorial/jsFunc/index2.html
