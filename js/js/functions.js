@@ -105,3 +105,7 @@ boss1.addSalary.owner = "boss2";
 // since both objects are not pointing to the same function, 
 // then changes in one, affects all instances (so, both prints "boss2").
 // ----------------------------------------------------------------------------------
+
+function bezReturna(){
+    console.log("bez returna da vidim da li vraća i undefined, vraća...");
+}
